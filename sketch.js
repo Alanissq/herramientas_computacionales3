@@ -203,7 +203,28 @@ const datos = [
         esperado: "espero aprender por lo menos un poco de modelaje 3D.",
     },
 ];
-
+              const trabajos = [
+              {
+              photo: "FOTOS/Moneda.webp",
+              title: "Intervención en Moneda, Santiago",
+              description: "Trabajo proyecto II, con prof. Patricio Araya",
+              },
+                  {
+              photo: "FOTOS/Mockup.webp",
+              title: "Mockup y creación página WEB",
+              description: "Trabajo procesos y prototipos I, con prof. Pamela fuentes",
+              },
+                  {
+              photo: "FOTOS/Proyecto JJVV.webp",
+              title: "Propuesta JJVV plaza Bogotá",
+              description: "Trabajo proyecto, con prof. Cristian Basaez",
+              },
+                  {
+              photo: "FOTOS/Matriz.webp",
+              title: "Matriz, analisis alcachofa",
+              description: "Trabajo proyecto I, con prof. Gabriela Vargas",
+              },
+             ];
 
 var yo;
 var otrxs = [];
@@ -236,7 +257,11 @@ function setup() {
     //Lo que sigue es JavaScript a secas
     otrxs.forEach((x)=>{
         document.querySelector("#otredad").innerHTML += `<div><a href="${x.cuenta}"><img src="${x.foto}" title="${x.esperado}"></a></div>`;
-    })
+    });
+    trabajos.forEach((x)=>{
+        document.querySelector("#portafolio").innerHTML += `<div><img src="${x.photo}"><p>${x.title}</p><p>${x.description}</p></div>`;
+    });
+     document.querySelector("#auditoria").innerHTML=yo.nombre;
     //Ahora vuelvo al p5.js
     noStroke();
 }
